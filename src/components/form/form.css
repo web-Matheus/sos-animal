@@ -1,0 +1,23 @@
+.form{
+    height: 318px;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+}
+.form div{
+    margin: 10px 0;
+}
+.estado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.radio-animal-estado input,.label-radio{
+    display: block;
+    float: left;
+}
+.form input[type="text"]{
+    padding: 10px;
+    margin: 10px 0;
+}

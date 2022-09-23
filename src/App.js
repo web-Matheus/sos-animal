@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
 
+import Home from './components/home/home'
+import About from './components/form/about';
+import ExtraInfor from './components/form/extraInfor';
 function App() {
+
+  const [page,setPage] = useState(0)
+
+  const pagesComp = [<Home/>,<About/>, <ExtraInfor/>]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+        <header>
+            <i></i>
+            <h1 className='title'>Sos animal</h1>
+        </header>
+        <section className='body'>
+          {pagesComp[page]}
+        </section>
+   
+    <footer>
+      <button
+      disabled={page === 0}
+      onClick={() => {
+        setPage((currPage) => currPage - 1)
+      }}
+      >Anterior
+      </button>
+      <button
+      disabled={page === pagesComp.length -1}
+      onClick={() => {
+        setPage((currPage) => currPage + 1)
+      }}
+      >Próximo
+      </button>
+    </footer>
     </div>
   );
 }
