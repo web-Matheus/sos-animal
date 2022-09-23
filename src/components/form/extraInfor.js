@@ -4,10 +4,7 @@ const ExtraInfor = () => {
     const [QueAnimal, setQueAnimal] = useState('')
     const [Local,setLocal] = useState('')
     const [AnimalTamanho, setAnimalTamanho] = useState('')
-        const handleSub = (e) =>{
-            e.preventDefault();
-            console.log(Local, QueAnimal,AnimalTamanho)
-        }
+        
   return (
     <div className='form'>
     <h2>Informação extra</h2>
