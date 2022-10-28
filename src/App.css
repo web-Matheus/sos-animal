@@ -10,28 +10,31 @@ body{
   color: #274c77;
   font-size: 30px;
 }
-.home{
-  width: 320px;
-  height: 568px;
+.container{
+  display: flex;
+  justify-content: center;
+  width: 420px;
+  height: 100vh;
   background-color: #fffdf7;
   margin: 0 auto;
   border-radius: 3px;
   text-align: center;
 }
-.home img{
-  width: 20rem;
+.container img{
+  margin: 30px 0 0;
+  width: 25rem;
 }
-.home p{
+.container p{
   font-size: 1.2rem;
   width: 17rem;
   margin: 40px auto;
 }
-.home footer{
+.container footer{
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.home footer button{
+.container button{
   border: none;
   background-color: #ffd60a;
   height: 4rem;
@@ -41,6 +44,13 @@ body{
   border-radius: 5px;
   cursor: pointer;
 }
-.home button:disabled{
-  display: none;
+.container a{
+  border: none;
+  background-color: #ffd60a;
+  text-decoration: none;
+  padding: 10px;
+  box-shadow: 0 8px 6px 0 rgb(0 0 0 / 20%);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }

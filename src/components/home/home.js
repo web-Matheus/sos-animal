@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Img from '../assets/dog-home.png'
-const home = () => {
+const Home = () => {
+  const navigate = useNavigate();
+
+  const goForm = () =>{
+    navigate("/form")
+  }
+  
   return (
     <div>
         <section>
@@ -9,10 +16,12 @@ const home = () => {
             animais em situação de rua.
             </p>
         </section>
+        <button onClick={goForm}
+        >report</button>
         
     </div>
 
   )
 }
 
-export default home
+export default Home

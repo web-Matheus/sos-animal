@@ -7,11 +7,9 @@
 .form div{
     margin: 10px 0;
 }
-.estado {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+textarea{
+    width: 93%;
+    height: 60px;
 }
 .radio-animal-estado input,.label-radio{
     display: block;
@@ -20,4 +18,13 @@
 .form input[type="text"]{
     padding: 10px;
     margin: 10px 0;
+}
+.sendForm{
+    border: none;
+    background-color: #ffd60a;
+    height: 4rem;
+    width: 6rem;
+    box-shadow: 0 8px 6px 0 rgb(0 0 0 / 20%);
+    color: #fff;
+    cursor: pointer;
 }

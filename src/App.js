@@ -1,41 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { BrowserRouter as Router , Routes, Route} from 'react-router-dom';
 
 import './App.css';
 
 import Home from './components/home/home'
-import About from './components/form/about';
-import ExtraInfor from './components/form/extraInfor';
+import Form from './components/form/form';
+import Feed from './components/feed/feed';
 function App() {
 
-  const [page,setPage] = useState(0)
-
-  const pagesComp = [<Home/>,<About/>, <ExtraInfor/>]
   return (
-    <div className="home">
-        <header>
-            <i></i>
-            <h1 className='title'>Sos animal</h1>
-        </header>
-        <section className='body'>
-          {pagesComp[page]}
-        </section>
-   
-    <footer>
-      <button
-      disabled={page === 0}
-      onClick={() => {
-        setPage((currPage) => currPage - 1)
-      }}
-      >Anterior
-      </button>
-      <button
-      disabled={page === pagesComp.length -1}
-      onClick={() => {
-        setPage((currPage) => currPage + 1)
-      }}
-      >Próximo
-      </button>
-    </footer>
+    <div className="container">
+       <Router>
+        <nav>
+         --
+        </nav>
+
+        <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/form' element={<Form/>}/>
+        <Route path='/feed' element={<Feed/>}/>
+        </Routes>
+       </Router>
     </div>
   );
 }
